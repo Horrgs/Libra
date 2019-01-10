@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project Libra</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ STATIC_URL }}frontend/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="{{ STATIC_URL }}frontend/bootstrap/css/clean-blog.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' >
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{% url 'welcome:index' %}">Home</a>
+                    </li>
+                    <!--<li>
+                        <a href="settings.html">Settings</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('{{STATIC_URL}}frontend/bootstrap/img/test.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading" style="color:#737464">
+                        <h1>Merry Christmas!</h1>
+                        <hr class="small">
+                        <span class="subheading">Known previously as Project Libra</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+          <div class="welcome" align="center">
+            <form action="{% url 'welcome:present' %}" method="post">
+                {% csrf_token %}
+                <button type='submit'>Shuffle</button>
+            </form>
+
+          </div>
+          <!--
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            Man must explore, and this is exploration at its greatest
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Problems look mighty small from 150 miles up
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                </div>
+                <hr>
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+                        </h2>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
+                </div>
+                <hr>
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            Science has not yet mastered prophecy
+                        </h2>
+                        <h3 class="post-subtitle">
+                            We predict too much for the next year and yet far too little for the next ten.
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
+                </div>
+                <hr>
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            Failure is not an option
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
+                </div>
+                <hr>
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#">Older Posts &rarr;</a>
+                    </li>
+                </ul>
+              -->
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                    <ul class="list-inline text-center">
+                      <p>Merry Christmas my princess, I love you.</p>
+                      <p class="copyright text-muted">Copyright &copy; Matthew Horrigan 2018</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--jQuery-->
+    <script src="{{ STATIC_URL }}frontend/bootstrap/vendor/jquery/jquery.min.js"></script>
+    <!--Bootstrap Core JavaScript-->
+    <script src="{{ STATIC_URL }}frontend/bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--Contact Form JavaScript-->
+    <script src="{{ STATIC_URL }}frontend/js/jqBootstrapValidation.js"></script>
+    <script src="{{ STATIC_URL }}frontend/js/contact_me.js"></script>
+
+    <!--Theme JavaScript-->
+    <script src="{{ STATIC_URL }}frontend/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project Libra</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ STATIC_URL }}frontend/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="{{ STATIC_URL }}frontend/bootstrap/css/clean-blog.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+                </button>ss
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{% url 'welcome:index' %}">Home</a>
+                        <!--<a href="{% url 'welcome:index' %}">Home</a>-->
+                    </li>
+                    <!--<li>
+                        <div>Bar</div>
+                    </li>
+                    <li>
+                        <div>Hello</div>
+                    </li>
+                    <li>
+                        <div>World</div>
+                    </li>  -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intro-header">
+        <div class="container">
+            <div class="row">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!--<img src="link=w1280-h800-c" class="inlineflex"> -->
+      {% csrf_token %}
+      {% if links %}
+          <img id="image" class="image" src=>
+          <script type="text/javascript">
+              photos_from_django = {{ links|safe }};
+              document.getElementById("image").src=photos_from_django[0];
+              photos_from_django.shift();
+              setInterval(function() {
+                  document.getElementById("image").src=photos_from_django[0];
+                  photos_from_django.shift();
+              }, 10000)
+              </script>
+      {% endif %}
+    </div>
+    <hr>
+
+    <!-- Footer -->
+    <!-- jQuery -->
+    <script src="{{ STATIC_URL }}frontend/bootstrap/vendor/jquery/jquery.min.js"></script>
+    <!--Bootstrap Core JavaScript-->
+    <script src="{{ STATIC_URL }}frontend/bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--Contact Form JavaScript-->
+    <script src="{{ STATIC_URL }}frontend/js/jqBootstrapValidation.js"></script>
+    <script src="{{ STATIC_URL }}frontend/js/contact_me.js"></script>
+
+    <!--Theme JavaScript-->
+    <script src="{{ STATIC_URL }}frontend/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
