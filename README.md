@@ -2,7 +2,7 @@
 
 ## What is Project Libra?
 
-Project Libra was a codename for this project as it was originally a Christmas gift for my girlfriend. An old Galaxy tablet in a home-made picture frame connected over VNC to a Raspberry Pi running this project.
+Project Libra was a codename for this project as it was originally a secret project. An old Galaxy tablet in a home-made picture frame connected over VNC to a Raspberry Pi running this project.
 
 Project Libra uses your Google account to fetch a specific album and create a slideshow. This way, it is easier for more photos to be added and removed just through Google. 
 
